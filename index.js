@@ -1,25 +1,16 @@
 $(document).ready(function() {
 
-    console.log(`attr of #cb is ${$('#cb').attr('checked')}.`);
-    console.log(`prop of #cb is ${$('#cb').prop('checked')}.`);
+    const $li = 
+        $('#myList li:first')
+            .appendTo('#myList')
+            .addClass('highlight');
 
-    $('#cb').prop('checked', true); // equals $('#cb').attr('checked', 'checked');
     
-    console.log(`executed $('#cb').prop('checked', true)`);
-    
-    console.log(`attr of #cb is ${$('#cb').attr('checked')}.`);
-    console.log(`prop of #cb is ${$('#cb').prop('checked')}.`);
+    $('#restoreBtn').click(function() {
+        $li.prependTo('#myList')
+            .removeClass('highlight');
+        
+        $(this).prop('disabled', true);
+    });
 
-    console.log('///////////////////////////////////////////')
-
-    console.log(`attr of #cb2 is ${$('#cb2').attr('checked')}.`);
-    console.log(`prop of #cb2 is ${$('#cb2').prop('checked')}.`);
-
-    $('#cb2').attr('checked', null); // $('#cb2').prop('checked', false);
-
-    console.log(`executed $('#cb').attr('checked', null)`);
-
-    console.log(`attr of #cb2 is ${$('#cb2').attr('checked')}.`);
-    console.log(`prop of #cb2 is ${$('#cb2').prop('checked')}.`);
-    
 });
