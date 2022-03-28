@@ -1,10 +1,18 @@
 $(document).ready(function() {
 
-    const students = ['amy', 'sophia', 'tomas'];
+    const newAgentInfo = {
+        name: 'Sophia',
+        active: true,
+    }
 
-    $.each(students, function(idx, student) {
-        const studentLabel = `${ student.charAt(0).toUpperCase()}${student.slice(1) }`;
-        console.log(`NO.${ idx } is ${ studentLabel }`);
-    });
+    const agentInfoOne = {
+        name: 'Tomas',
+        active: false,
+    }
 
+    $.extend(newAgentInfo, agentInfoOne);
+
+    console.log('newAgent', newAgentInfo);
+    console.log('agentTwo', agentInfoOne);
+    
 });
