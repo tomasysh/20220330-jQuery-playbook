@@ -1,15 +1,17 @@
 $(document).ready(function() {
 
-    $('.header')
-        .mouseenter(function() {
-            $(this).stop().addClass('highlight').animate({ fontSize: '+=50'}, 1000);
-        })
-        .mouseleave(function() {
-            $(this).stop().removeClass('highlight').animate({ fontSize: '-=50'}, 1000);
-        })
+    $('body').on('keydown', function(event) {
+        const leftArrow = 37;
 
-    $('.main').hover(function() {
-        $(this).toggleClass('highlight');
+        if (event.which === leftArrow) {
+            $('.charmander')
+                .stop()
+                .animate({
+                    rotate: '180',
+                    marginRight: '+=10'
+                }, 50);
+        }
+
     });
 
 });
