@@ -1,3 +1,11 @@
 $(document).ready(function() {
-    $('h1').fadeTo(3000, 0.1);
+
+    $('h1')
+        .animate({ 
+            fontSize: '+=50px',
+            opacity: 1,
+         }, 3000,
+        )
+        .fadeOut(10000);
+
 });
