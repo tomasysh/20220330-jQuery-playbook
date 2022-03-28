@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    $('#account').focus(function() {
-        console.log('on account input !');
+    $('#account').blur(function() {
+        console.log('blur from account input !');
     });
 
 });
