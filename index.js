@@ -1,18 +1,9 @@
 $(document).ready(function() {
 
-    const newAgentInfo = {
-        name: 'Sophia',
-        active: true,
+    const students = ['amy', 'sophia', 'tomas'];
+
+    if ($.inArray('sophia', students) !== -1) {
+        console.log('sophia is my student.')
     }
-
-    const agentInfoOne = {
-        name: 'Tomas',
-        active: false,
-    }
-
-    $.extend(newAgentInfo, agentInfoOne);
-
-    console.log('newAgent', newAgentInfo);
-    console.log('agentTwo', agentInfoOne);
     
 });
