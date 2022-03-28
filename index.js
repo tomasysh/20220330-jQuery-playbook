@@ -1,14 +1,17 @@
 $(document).ready(function() {
 
-    $(`<h1>HELLO WORLD</h1>
-        <h1>jQuery Playbook</h1>
-        <span>20220330-20220331</span>
-        <span>TomasYSH</span>`).prependTo('body');
+    $('button.sad').on('click', function() {
+        alert('so sad');
+    });
 
-    $('<a>', {
-        html: `Text me`,
-        href: 'mailto: tomasysh@gmail.com',
-        target: '_blank',
-    }).insertBefore('.myList');
+    $(`<button type="button" class="sad">:(</button>`)
+        .appendTo('.header');
+
+    $('.main').on('click', 'button.smile', function() {
+        alert('so happy');
+    })
+
+    $(`<button type="button" class="smile">:)</button>`)
+        .appendTo('.main');
 
 });
