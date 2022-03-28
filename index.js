@@ -1,18 +1,25 @@
 $(document).ready(function() {
+
+    console.log(`attr of #cb is ${$('#cb').attr('checked')}.`);
+    console.log(`prop of #cb is ${$('#cb').prop('checked')}.`);
+
+    $('#cb').prop('checked', true); // equals $('#cb').attr('checked', 'checked');
     
-    console.log(`Is [] array ? ${$.isArray([])}`);
-    console.log(`Is function() {} a function ? ${$.isFunction(function() {})}`);
-    console.log(`Is 3.14 a number ? ${$.isNumeric(3.14)}`);
-    console.log(`true is a  ${$.type(true)}.`)
-    console.log(`3 is a ${$.type(3)}.`);
-    console.log(`'test' is a ${$.type('test')}.`);
-    console.log(`function() {} is a ${$.type(function() {})}.`);
-    console.log(`new Boolean() is a ${$.type(new Boolean())}.`);
-    console.log(`new Number(3) is a ${$.type(new Number(3))}.`)
-    console.log(`new Function() is a ${$.type(new Function(3))}.`)
-    console.log(`[]  is a ${$.type([])}.`)
-    console.log(`null  is a ${$.type(null)}.`)
-    console.log(`/test/ is a ${$.type(/test/)}.`)
-    console.log(`new Date() is a ${$.type(new Date())}.`)
+    console.log(`executed $('#cb').prop('checked', true)`);
+    
+    console.log(`attr of #cb is ${$('#cb').attr('checked')}.`);
+    console.log(`prop of #cb is ${$('#cb').prop('checked')}.`);
+
+    console.log('///////////////////////////////////////////')
+
+    console.log(`attr of #cb2 is ${$('#cb2').attr('checked')}.`);
+    console.log(`prop of #cb2 is ${$('#cb2').prop('checked')}.`);
+
+    $('#cb2').attr('checked', null); // $('#cb2').prop('checked', false);
+
+    console.log(`executed $('#cb').attr('checked', null)`);
+
+    console.log(`attr of #cb2 is ${$('#cb2').attr('checked')}.`);
+    console.log(`prop of #cb2 is ${$('#cb2').prop('checked')}.`);
     
 });
