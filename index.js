@@ -1,17 +1,7 @@
 $(document).ready(function() {
 
-    $('body').on('keydown', function(event) {
-        const leftArrow = 37;
-
-        if (event.which === leftArrow) {
-            $('.charmander')
-                .stop()
-                .animate({
-                    rotate: '180',
-                    marginRight: '+=10'
-                }, 50);
-        }
-
+    $('#account').focus(function() {
+        console.log('on account input !');
     });
 
 });
