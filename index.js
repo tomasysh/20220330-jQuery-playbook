@@ -1,16 +1,12 @@
 $(document).ready(function() {
 
-    const $li = 
-        $('#myList li:first')
-            .appendTo('#myList')
-            .addClass('highlight');
-
-    
-    $('#restoreBtn').click(function() {
-        $li.prependTo('#myList')
-            .removeClass('highlight');
-        
-        $(this).prop('disabled', true);
+    const $myList = $('.myList').click(function() {
+        console.log('click #myList');
     });
+
+    const $cloneList = 
+        $myList
+            .clone(true)
+            .appendTo('body');
 
 });
