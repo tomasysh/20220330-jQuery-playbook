@@ -1,11 +1,10 @@
 $(document).ready(function() {
 
-    $('h1')
-        .animate({ 
-            fontSize: '+=50px',
-            opacity: 1,
-         }, 3000,
-        )
-        .fadeOut(10000);
+    const students = ['amy', 'sophia', 'tomas'];
+
+    $.each(students, function(idx, student) {
+        const studentLabel = `${ student.charAt(0).toUpperCase()}${student.slice(1) }`;
+        console.log(`NO.${ idx } is ${ studentLabel }`);
+    });
 
 });
